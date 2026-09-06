@@ -26,7 +26,7 @@ body {
   background:var(--paper);
   color:var(--ink);
   font-family:var(--sans);
-  font-size:16px;
+  font-size:1.0625rem;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
@@ -76,7 +76,7 @@ em {
 }
 
 h3 {
-  font-size:19px;
+  font-size:1.25rem;
   line-height:1.35;
   font-weight:550;
   letter-spacing:-.025em;
@@ -136,7 +136,7 @@ h3 {
   display:flex;
   align-items:center;
   gap:35px;
-  font-size:14px;
+  font-size:0.9375rem;
 }
 
 .main-nav>a {
@@ -177,7 +177,7 @@ h3 {
   align-items:center;
   gap:10px;
   text-transform:uppercase;
-  font-size:10px;
+  font-size:0.75rem;
   font-weight:650;
   letter-spacing:2px;
   margin-bottom:26px;
@@ -197,9 +197,9 @@ h1 {
 }
 
 .hero-description {
-  max-width:420px;
+  max-width:460px;
   color:var(--muted);
-  font-size:16px;
+  font-size:1.125rem;
   line-height:1.8;
   margin-bottom:30px;
 }
@@ -217,7 +217,7 @@ h1 {
   justify-content:space-between;
   gap:40px;
   padding:16px 23px;
-  font-size:14px;
+  font-size:0.9375rem;
   font-weight:500;
   transition:background .2s,transform .2s;
 }
@@ -244,7 +244,7 @@ h1 {
   display:inline-flex;
   align-items:center;
   gap:20px;
-  font-size:13px;
+  font-size:0.9375rem;
   padding-block:7px;
   border-bottom:1px solid #a1ae94;
 }
@@ -258,7 +258,7 @@ h1 {
   display:flex;
   gap:9px;
   align-items:center;
-  font-size:11px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin:25px 0 0;
 }
@@ -474,7 +474,7 @@ h1 {
 }
 
 .values-inner p {
-  font-size:12px;
+  font-size:0.875rem;
   line-height:1.65;
   margin:0;
 }
@@ -487,7 +487,7 @@ h1 {
   display:flex;
   align-items:center;
   gap:13px;
-  font-size:12px;
+  font-size:0.875rem;
 }
 
 .values-inner i {
@@ -510,7 +510,7 @@ h1 {
 
 .section-heading>p {
   max-width:365px;
-  font-size:14px;
+  font-size:1.0625rem;
   color:var(--muted);
   margin-bottom:4px;
   line-height:1.8;
@@ -557,17 +557,17 @@ h1 {
 }
 
 .card-top>span {
-  font-size:10px;
+  font-size:0.8125rem;
   color:#7f8979;
 }
 
 .service-card h3 {
-  max-width:185px;
+  max-width:230px;
   margin-bottom:16px;
 }
 
 .service-card p {
-  font-size:13px;
+  font-size:1.0625rem;
   color:var(--muted);
   line-height:1.85;
   margin-bottom:27px;
@@ -577,7 +577,7 @@ h1 {
   margin-top:auto;
   border-top:1px solid var(--line);
   padding-top:16px;
-  font-size:9px;
+  font-size:0.8125rem;
   letter-spacing:.3px;
   color:#637553;
 }
@@ -603,7 +603,7 @@ h1 {
   align-items:center;
   gap:15px;
   margin-top:30px;
-  font-size:11px;
+  font-size:0.8125rem;
   color:#65735a;
 }
 
@@ -614,7 +614,7 @@ h1 {
 }
 
 .about-copy p {
-  font-size:14px;
+  font-size:1.0625rem;
   color:var(--muted);
   line-height:1.9;
   margin-bottom:20px;
@@ -655,7 +655,7 @@ h1 {
 }
 
 .step p {
-  font-size:14px;
+  font-size:1.0625rem;
   color:var(--muted);
   line-height:1.85;
   margin:0;
@@ -689,7 +689,7 @@ summary {
   gap:20px;
   cursor:pointer;
   padding-block:23px;
-  font-size:14px;
+  font-size:1rem;
   list-style:none;
 }
 
@@ -728,7 +728,7 @@ details[open] summary {
 }
 
 .faq-list details>p {
-  font-size:13px;
+  font-size:1.0625rem;
   color:var(--muted);
   line-height:1.9;
   max-width:510px;
@@ -763,7 +763,7 @@ details[open] summary {
 
 .contact-copy>p:not(.eyebrow) {
   max-width:390px;
-  font-size:14px;
+  font-size:1.0625rem;
   color:#c4d0c1;
   line-height:1.9;
   margin-block:24px;
@@ -790,7 +790,7 @@ details[open] summary {
 
 .contact-label {
   display:block;
-  font-size:9px;
+  font-size:0.8125rem;
   letter-spacing:1.7px;
   text-transform:uppercase;
   color:#bacbae;
@@ -811,13 +811,13 @@ details[open] summary {
 }
 
 .contact-details p {
-  font-size:15px;
+  font-size:1.0625rem;
   margin-bottom:0;
   line-height:1.7;
 }
 
 .contact-details .placeholder-note {
-  font-size:10px;
+  font-size:0.8125rem;
   color:#becdb5;
   margin-top:30px;
   max-width:260px;
@@ -840,7 +840,7 @@ details[open] summary {
 
 .form-field label {
   display:block;
-  font-size:12px;
+  font-size:0.9375rem;
   margin-bottom:8px;
 }
 
@@ -850,7 +850,7 @@ details[open] summary {
 
 .form-field .optional {
   color:#c4d0c1;
-  font-size:11px;
+  font-size:0.8125rem;
 }
 
 .form-field input,.form-field textarea {
@@ -874,7 +874,7 @@ details[open] summary {
 .form-field textarea::placeholder {
   color:#b9c8bc;
   opacity:1;
-  font-size:13px;
+  font-size:1rem;
 }
 
 .form-field input:focus-visible,.form-field textarea:focus-visible {
@@ -887,7 +887,7 @@ details[open] summary {
 }
 
 .form-note {
-  font-size:11px;
+  font-size:0.8125rem;
   line-height:1.8;
   color:#c4d0c1;
   margin-bottom:20px;
@@ -919,12 +919,12 @@ details[open] summary {
 }
 
 .form-required {
-  font-size:10px;
+  font-size:0.8125rem;
   color:#c4d0c1;
 }
 
 .form-status {
-  font-size:12px;
+  font-size:0.9375rem;
   color:var(--lime);
   margin:18px 0 0;
 }
@@ -934,7 +934,7 @@ details[open] summary {
 }
 
 .contact-form #contact-submit-label {
-  font-size:14px;
+  font-size:0.9375rem;
   line-height:1.6;
 }
 
@@ -976,7 +976,7 @@ details[open] summary {
 }
 
 .footer-top>p {
-  font-size:12px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin:0;
 }
@@ -986,7 +986,7 @@ details[open] summary {
   display:flex;
   align-items:center;
   gap:20px;
-  font-size:11px;
+  font-size:0.8125rem;
 }
 
 .footer-bottom {
@@ -998,7 +998,7 @@ details[open] summary {
 }
 
 .footer-bottom p {
-  font-size:10px;
+  font-size:0.8125rem;
   color:var(--muted);
   margin:0;
 }
@@ -1058,6 +1058,7 @@ details[open] summary {
     gap:23px;
   }
   .services-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:12px;
   }
   .service-card {
@@ -1073,7 +1074,7 @@ details[open] summary {
     padding-left:30px;
   }
   .values-inner>span {
-    font-size:11px;
+    font-size:0.875rem;
     gap:8px;
   }
 }
@@ -1090,7 +1091,7 @@ details[open] summary {
   }
   .main-nav {
     gap:17px;
-    font-size:12px;
+    font-size:0.9375rem;
   }
   .main-nav .nav-contact {
     margin:0;
@@ -1109,10 +1110,10 @@ details[open] summary {
     border-top-right-radius:65px;
   }
   .hero-description {
-    font-size:14px;
+    font-size:1.125rem;
   }
   .eyebrow {
-    font-size:9px;
+    font-size:0.75rem;
     letter-spacing:1.5px;
   }
   .hero-actions {
@@ -1168,7 +1169,7 @@ details[open] summary {
     padding-block:24px;
   }
   .values-inner>span {
-    font-size:12px;
+    font-size:0.875rem;
   }
   .section {
     padding-block:75px;
@@ -1178,7 +1179,7 @@ details[open] summary {
   }
   .section-heading>p {
     max-width:290px;
-    font-size:13px;
+    font-size:1.0625rem;
   }
   .services-grid {
     grid-template-columns:repeat(2,1fr);
@@ -1250,7 +1251,7 @@ details[open] summary {
     justify-content:space-between;
     gap:18px;
     padding-top:24px;
-    font-size:12px;
+    font-size:0.9375rem;
   }
   .js .menu-toggle {
     display:flex;
@@ -1259,7 +1260,7 @@ details[open] summary {
     border:0;
     background:none;
     color:var(--ink);
-    font-size:12px;
+    font-size:0.9375rem;
     padding:10px 0 10px 12px;
     cursor:pointer;
   }
@@ -1303,7 +1304,7 @@ details[open] summary {
   .js .main-nav>a {
     padding:13px 4px;
     border-top:1px solid var(--line);
-    font-size:14px;
+    font-size:1rem;
   }
   .js .main-nav .nav-contact {
     border:0;
@@ -1324,7 +1325,7 @@ details[open] summary {
   }
   .hero-description {
     max-width:440px;
-    font-size:15px;
+    font-size:1.125rem;
   }
   .hero-actions {
     gap:26px;
@@ -1377,13 +1378,14 @@ details[open] summary {
     font-size:6px;
   }
   .values-inner {
-    gap:18px 12px;
+    grid-template-columns:1fr;
+    gap:14px;
   }
   .values-inner p {
-    font-size:11px;
+    font-size:0.875rem;
   }
   .values-inner>span {
-    font-size:10px;
+    font-size:0.875rem;
     gap:7px;
   }
   .values-inner i {
@@ -1402,25 +1404,26 @@ details[open] summary {
   .section-heading>p {
     max-width:400px;
     margin:22px 0 0;
-    font-size:14px;
+    font-size:1.0625rem;
   }
   .services-grid {
+    grid-template-columns:1fr;
     gap:12px;
   }
   .service-card {
-    padding:22px 17px;
+    padding:26px;
   }
   .service-card h3 {
-    font-size:17px;
+    font-size:1.25rem;
   }
   .service-card p {
-    font-size:12px;
+    font-size:1.0625rem;
   }
   .card-top {
     margin-bottom:24px;
   }
   .card-tag {
-    font-size:8px;
+    font-size:0.8125rem;
   }
   .about-section {
     padding-block:58px;
@@ -1460,7 +1463,7 @@ details[open] summary {
   }
   .step p {
     max-width:none;
-    font-size:13px;
+    font-size:1.0625rem;
   }
   .faq-section {
     grid-template-columns:1fr;
@@ -1474,7 +1477,7 @@ details[open] summary {
     font-size:42px;
   }
   .faq-list summary {
-    font-size:13px;
+    font-size:1rem;
     padding-block:21px;
   }
   .contact-section {
@@ -1507,7 +1510,7 @@ details[open] summary {
     font-size:19px;
   }
   .contact-details p {
-    font-size:13px;
+    font-size:1.0625rem;
   }
   .contact-details .placeholder-note {
     margin:0;
@@ -1525,7 +1528,7 @@ details[open] summary {
   .footer-top>p {
     order:3;
     width:100%;
-    font-size:11px;
+    font-size:0.8125rem;
   }
   .footer-bottom {
     flex-direction:column;
@@ -1553,13 +1556,13 @@ details[open] summary {
     grid-template-columns:1fr;
   }
   .service-card h3 {
-    font-size:20px;
+    font-size:1.25rem;
   }
   .service-card p {
-    font-size:14px;
+    font-size:1.0625rem;
   }
   .card-tag {
-    font-size:10px;
+    font-size:0.8125rem;
   }
   .hero-art {
     height:395px;
@@ -1592,7 +1595,7 @@ details[open] summary {
     grid-template-columns:1fr;
   }
   .values-inner>span {
-    font-size:12px;
+    font-size:0.875rem;
   }
   .contact-details {
     grid-template-columns:1fr;
