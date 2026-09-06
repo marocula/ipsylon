@@ -45,35 +45,74 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 document.documentElement.classList.add('js');
 
 // Only the public form endpoint in index.html needs configuration; no API secret.
-// Native POST lets Formspree handle delivery, spam challenges, and confirmation.
+// Request JSON so Formspree responds without taking visitors off the website.
 const contactForm = document.querySelector('#contact-form');
 const contactSubmit = document.querySelector('#contact-submit');
+const submitLabel = document.querySelector('#contact-submit-label');
 const formStatus = document.querySelector('#form-status');
+const contactFields = contactForm.querySelectorAll('input, textarea');
 const endpoint = contactForm.getAttribute('action');
 const formConfigured = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
 let submitting = false;
 
-function readyContactForm() {
-  submitting = false;
-  contactSubmit.disabled = !formConfigured;
-  contactForm.removeAttribute('aria-busy');
-  formStatus.textContent = formConfigured
-    ? ''
-    : 'Obrazac je u pripremi. Slanje trenutačno nije dostupno.';
+function setFormBusy(busy) {
+  submitting = busy;
+  contactSubmit.disabled = busy || !formConfigured;
+  contactForm.setAttribute('aria-busy', String(busy));
+  submitLabel.textContent = busy ? 'Slanje…' : 'Pošaljite upit';
+  contactFields.forEach((field) => { field.readOnly = busy; });
 }
 
-contactForm.addEventListener('submit', (event) => {
-  if (!formConfigured || submitting) {
-    event.preventDefault();
-    return;
+function showFormStatus(message, state) {
+  formStatus.textContent = message;
+  formStatus.dataset.state = state;
+}
+
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!formConfigured || submitting || !contactForm.reportValidity()) return;
+
+  const body = new FormData(contactForm);
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 20000);
+  setFormBusy(true);
+  showFormStatus('Vaš upit se šalje. Molimo pričekajte.', 'pending');
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      body,
+      headers: { Accept: 'application/json' },
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const messages = {
+        403: 'Slanje nije odobreno. Javite nam se e-poštom ili pokušajte kasnije.',
+        422: 'Upit nije prihvaćen. Provjerite unesene podatke i pokušajte ponovno.',
+        429: 'Slanje trenutačno nije dostupno. Pokušajte kasnije ili nam se javite e-poštom.',
+      };
+      showFormStatus(messages[response.status] || 'Upit nije prihvaćen. Pokušajte kasnije ili nam se javite e-poštom.', 'error');
+      return;
+    }
+
+    // An HTML challenge page or unexpected response is not a confirmation.
+    const result = await response.json();
+    if (!result || typeof result !== 'object' || result.ok === false || result.errors?.length) {
+      throw new Error('Unconfirmed submission');
+    }
+
+    contactForm.reset();
+    showFormStatus('Hvala vam! Vaš upit je uspješno poslan. Javit ćemo vam se uskoro.', 'success');
+  } catch {
+    // A lost response does not prove the message failed. Never retry automatically.
+    showFormStatus('Nismo uspjeli potvrditi slanje. Vaš tekst je sačuvan u obrascu. Provjerite vezu ili nam se javite e-poštom.', 'error');
+  } finally {
+    window.clearTimeout(timeout);
+    setFormBusy(false);
+    formStatus.focus({ preventScroll: true });
   }
-  // Browser validation runs before this event. Keep fields enabled for the POST.
-  submitting = true;
-  contactSubmit.disabled = true;
-  contactForm.setAttribute('aria-busy', 'true');
-  formStatus.textContent = 'Otvaramo potvrdu slanja…';
 });
 
-// Restore the button when returning from Formspree with the browser Back button.
-window.addEventListener('pageshow', readyContactForm);
-readyContactForm();
+setFormBusy(false);
+showFormStatus(formConfigured ? '' : 'Obrazac je u pripremi. Slanje trenutačno nije dostupno.', 'pending');
