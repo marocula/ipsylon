@@ -1,0 +1,5 @@
+# Copy only public website assets into the deployment directory.
+# No package installation or compilation is needed.
+[build]
+  command = "mkdir -p dist && cp index.html styles.css script.js favicon.svg dist/"
+  publish = "dist"

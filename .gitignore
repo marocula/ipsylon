@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.vscode/
+.netlify/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.zip
