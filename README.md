@@ -15,14 +15,14 @@ Then visit http://localhost:8000. Stop the server with Ctrl+C.
 ## Make it your own
 
 - **Text and services:** edit `index.html`. All copy is sample copy; confirm services and working arrangements with the owner.
-- **Contact information:** replace `info@ipsylon.example` everywhere in `index.html`, including the `mailto:` link. `.example` is a placeholder domain, so the current address cannot receive messages. Replace the phone and street address too. Once a real phone number is available, you can wrap it in a link such as `<a href="tel:+38512345678">+385 1 234 5678</a>`. Configure the contact form separately as described below.
-- **Business details:** add the full registered business name and any required business disclosures confirmed by the owner before publishing. The page currently uses only the supplied brand name, Ipsylon.
+- **Contact information:** replace `info@ipsylon.example` everywhere in `index.html`, including the `mailto:` link. `.example` is a placeholder domain, so the current address cannot receive messages. Replace the phone too. The owner name (Josip Pripunić) and address (Ulica Matije Mesića 37, 35000 Slavonski Brod) were transcribed from the supplied business-card image. Once a real phone number is available, you can wrap it in a link such as `<a href="tel:+38512345678">+385 1 234 5678</a>`. Configure the contact form separately as described below.
+- **Business details:** add the full registered business name and any required business disclosures confirmed by the owner before publishing. The page uses the supplied brand name, owner name, and address; these do not establish the full registered business name.
 - **Colors:** edit the variables at the top of `styles.css`.
-- **Logo:** the wordmark and simple Y symbol are editable directly in `index.html`; the browser icon is `favicon.svg`.
+- **Logo:** the main visual is `images/ipsylon-logo-light.jpeg`, copied unchanged from the supplied `3.jpeg` (1536 × 1024, approximately 93 KB). It is displayed without cropping. The small header/footer wordmark and Y symbol remain editable in `index.html`; the browser icon is `favicon.svg`. The other supplied mockups are not included in the deployed assets.
 - **Search preview:** edit the page `<title>` and description in `index.html`.
 - **Placeholder notices:** remove the notice under the contact details and the footer's “Ogledna stranica” note once real content is in place.
 
-The illustration is made with CSS and does not depict actual financial results. The footer year updates automatically. Navigation, anchor links, and native expandable FAQ answers remain usable without JavaScript. The contact form requires JavaScript to enable its submit button; visitors can also use the direct email link.
+The footer year updates automatically. Navigation, anchor links, and native expandable FAQ answers remain usable without JavaScript. The contact form requires JavaScript to enable its submit button; visitors can also use the direct email link.
 
 ## Contact form (Formspree)
 
@@ -49,11 +49,11 @@ Official setup reference: [Building an HTML Form](https://help.formspree.io/arti
 
 ## Publish
 
-Upload `index.html`, `styles.css`, `script.js`, and `favicon.svg` together to a static web host or a standard hosting account's public website directory. Keep the files in the same folder. This site does not require Node.js or a server application.
+Upload `index.html`, `styles.css`, `script.js`, `favicon.svg`, and the `images` folder together to a static web host or a standard hosting account's public website directory. Keep the files in the same folder. This site does not require Node.js or a server application.
 
 ### Automatic Netlify deployments from GitHub
 
-The repository is intended to deploy from its `main` branch. `netlify.toml` copies the four public website files into `dist`, which Netlify publishes. Documentation, editor settings, and Git files are not included in that directory. No dependencies or compilation are required.
+The repository is intended to deploy from its `main` branch. `netlify.toml` copies the four public website files and the `images` folder into `dist`, which Netlify publishes. Documentation, editor settings, and Git files are not included in that directory. No dependencies or compilation are required.
 
 To connect an existing Netlify project, open **Project configuration → Build & deploy → Continuous deployment → Repository**, link GitHub, and select `marocula/ipsylon`. Authorize the Netlify GitHub App for this repository if prompted. Choose `main` as the production branch, leave the base directory unset, and use the build command and publish directory from `netlify.toml`. Linking the existing project keeps its current website address.
 
@@ -62,7 +62,7 @@ For a new Netlify project, choose **Add new project → Import an existing proje
 Once linked, edits become public when committed and pushed to `main`:
 
 ```sh
-git add index.html styles.css script.js favicon.svg
+git add index.html styles.css script.js favicon.svg images
 git commit -m "Update website content"
 git push
 ```

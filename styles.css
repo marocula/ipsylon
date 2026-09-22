@@ -268,196 +268,31 @@ h1 {
   color:#718756;
 }
 
-.hero-art {
-  height:540px;
-  position:relative;
-  background:var(--green);
+.hero-visual {
+  min-width:0;
+  width:100%;
+  margin:0;
   overflow:hidden;
-  border-radius:3px 90px 3px 3px;
-  isolation:isolate;
+  border:1px solid var(--line);
+  border-radius:3px 64px 3px 3px;
+  background:var(--white);
 }
 
-.art-grid {
-  position:absolute;
-  inset:0;
-  background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);
-  background-size:44px 44px;
+.hero-visual img {
+  display:block;
+  width:100%;
+  height:auto;
 }
 
-.art-caption {
-  position:absolute;
-  top:32px;
-  left:30px;
-  font-size:8px;
-  letter-spacing:1.8px;
-  color:#c6d4bd;
-}
-
-.orbit {
-  position:absolute;
-  border:1px solid #adc69238;
-  border-radius:50%;
-  width:570px;
-  height:570px;
-  left:90px;
-  top:130px;
-}
-
-.orbit-two {
-  width:450px;
-  height:450px;
-  left:150px;
-  top:190px;
-}
-
-.document {
-  position:absolute;
-  width:65%;
-  height:345px;
-  left:18%;
-  top:100px;
-  border-radius:3px;
-}
-
-.document-back {
-  background:#b7c49d;
-  transform:rotate(-11deg);
-  left:14%;
-  top:96px;
-  box-shadow:0 8px 20px #0001;
-}
-
-.document-front {
-  background:#faf9ed;
-  transform:rotate(5deg);
-  padding:26px;
-  box-shadow:0 20px 50px #001b2440;
-}
-
-.document-top {
+.hero-visual figcaption {
   display:flex;
-  align-items:center;
+  flex-wrap:wrap;
   justify-content:space-between;
-}
-
-.document-symbol {
-  font:32px var(--serif);
-}
-
-.document-top>span:last-child {
-  font-size:7px;
-  line-height:1.5;
-  letter-spacing:1px;
-}
-
-.document-rule {
-  height:1px;
-  background:#d4d8c5;
-  margin:14px 0 20px;
-}
-
-.document p {
-  font-family:var(--serif);
-  font-size:30px;
-  line-height:1.1;
-  letter-spacing:-1px;
-  margin-bottom:15px;
-}
-
-.document p em {
-  color:#6b815a;
-}
-
-.chart {
-  height:85px;
-  border-bottom:1px solid #b7c39f;
-  display:flex;
-  align-items:flex-end;
-  gap:10px;
-  padding-inline:5px;
-}
-
-.chart span {
-  flex:1;
-  background:#d6ddc2;
-  height:23%;
-}
-
-.chart span:nth-child(2) {
-  height:36%;
-}
-
-.chart span:nth-child(3) {
-  height:32%;
-}
-
-.chart span:nth-child(4) {
-  height:53%;
-  background:#a2b587;
-}
-
-.chart span:nth-child(5) {
-  height:65%;
-  background:#819966;
-}
-
-.chart span:nth-child(6) {
-  height:76%;
-  background:#57734c;
-}
-
-.chart span:nth-child(7) {
-  height:94%;
-  background:var(--green);
-}
-
-.document-bottom {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:8px;
-  margin-top:16px;
-}
-
-.document-bottom>span:last-child {
-  font-size:19px;
-}
-
-.check-badge {
-  position:absolute;
-  bottom:73px;
-  right:20px;
-  background:var(--lime);
-  font-size:11px;
-  font-weight:500;
-  line-height:1.45;
-  padding:16px 21px 16px 58px;
-  transform:rotate(-5deg);
-  box-shadow:0 8px 20px #001c2420;
-}
-
-.check-badge>span {
-  position:absolute;
-  left:18px;
-  top:19px;
-  border:1px solid #7b9361;
-  border-radius:50%;
-  width:26px;
-  height:26px;
-  text-align:center;
-  line-height:25px;
-}
-
-.art-bottom {
-  position:absolute;
-  bottom:25px;
-  left:30px;
-  right:30px;
-  display:flex;
-  justify-content:space-between;
-  color:#b8c9ae;
-  font-size:7px;
-  letter-spacing:1.4px;
+  gap:8px 20px;
+  padding:20px 24px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:0.8125rem;
 }
 
 .values-strip {
@@ -1008,19 +843,6 @@ details[open] summary {
     gap:100px;
     padding-block:90px;
   }
-  .hero-art {
-    height:570px;
-  }
-  .document {
-    top:110px;
-    height:360px;
-  }
-  .document-back {
-    top:106px;
-  }
-  .chart {
-    height:100px;
-  }
 }
 
 @media(max-width:1100px) {
@@ -1029,30 +851,6 @@ details[open] summary {
   }
   .hero {
     gap:40px;
-  }
-  .hero-art {
-    height:500px;
-  }
-  .document {
-    width:72%;
-    left:15%;
-    padding:22px;
-    height:330px;
-    top:91px;
-  }
-  .document-back {
-    left:11%;
-    top:87px;
-  }
-  .document p {
-    font-size:28px;
-  }
-  .chart {
-    height:80px;
-  }
-  .check-badge {
-    right:12px;
-    bottom:65px;
   }
   .main-nav {
     gap:23px;
@@ -1105,10 +903,6 @@ details[open] summary {
   h1 {
     font-size:63px;
   }
-  .hero-art {
-    height:460px;
-    border-top-right-radius:65px;
-  }
   .hero-description {
     font-size:1.125rem;
   }
@@ -1122,45 +916,6 @@ details[open] summary {
   .button {
     padding:14px 18px;
     gap:24px;
-  }
-  .document {
-    height:303px;
-    padding:19px;
-    top:79px;
-  }
-  .document-back {
-    top:75px;
-  }
-  .document p {
-    font-size:25px;
-  }
-  .document-top>span:last-child {
-    font-size:6px;
-  }
-  .chart {
-    gap:7px;
-    height:63px;
-  }
-  .check-badge {
-    bottom:56px;
-    font-size:10px;
-    padding:12px 15px 12px 47px;
-  }
-  .check-badge>span {
-    width:22px;
-    height:22px;
-    line-height:21px;
-    left:13px;
-    top:16px;
-  }
-  .art-caption {
-    font-size:6px;
-    left:22px;
-  }
-  .art-bottom {
-    left:22px;
-    right:22px;
-    font-size:6px;
   }
   .values-inner {
     display:grid;
@@ -1332,50 +1087,6 @@ details[open] summary {
   }
   .hero-note {
     margin-top:21px;
-  }
-  .hero-art {
-    height:440px;
-    max-width:460px;
-    width:100%;
-    justify-self:center;
-  }
-  .document {
-    width:62%;
-    left:22%;
-    top:75px;
-    height:300px;
-    padding:22px;
-  }
-  .document-back {
-    left:18%;
-    top:71px;
-  }
-  .document p {
-    font-size:29px;
-  }
-  .document-rule {
-    margin-block:11px 15px;
-  }
-  .chart {
-    height:63px;
-  }
-  .document-bottom {
-    font-size:7px;
-    margin-top:12px;
-  }
-  .check-badge {
-    right:27px;
-    bottom:50px;
-  }
-  .art-caption {
-    font-size:7px;
-    left:25px;
-    top:26px;
-  }
-  .art-bottom {
-    left:25px;
-    right:25px;
-    font-size:6px;
   }
   .values-inner {
     grid-template-columns:1fr;
@@ -1563,33 +1274,6 @@ details[open] summary {
   }
   .card-tag {
     font-size:0.8125rem;
-  }
-  .hero-art {
-    height:395px;
-  }
-  .document {
-    width:70%;
-    left:18%;
-    top:61px;
-    height:280px;
-    padding:18px;
-  }
-  .document-back {
-    left:13%;
-    top:57px;
-  }
-  .document p {
-    font-size:26px;
-  }
-  .chart {
-    height:54px;
-  }
-  .check-badge {
-    right:12px;
-    bottom:39px;
-  }
-  .art-bottom {
-    bottom:18px;
   }
   .values-inner {
     grid-template-columns:1fr;
