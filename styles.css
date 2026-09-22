@@ -651,11 +651,8 @@ details[open] summary {
   line-height:1.7;
 }
 
-.contact-details .placeholder-note {
-  font-size:0.8125rem;
-  color:#becdb5;
-  margin-top:30px;
-  max-width:260px;
+.contact-business {
+  grid-column:1/-1;
 }
 
 .contact-form {
@@ -1223,10 +1220,6 @@ details[open] summary {
   .contact-details p {
     font-size:1.0625rem;
   }
-  .contact-details .placeholder-note {
-    margin:0;
-    align-self:end;
-  }
   .form-row {
     grid-template-columns:1fr;
     gap:0;
@@ -1283,9 +1276,6 @@ details[open] summary {
   }
   .contact-details {
     grid-template-columns:1fr;
-  }
-  .contact-details .placeholder-note {
-    margin-top:0;
   }
 }
 
